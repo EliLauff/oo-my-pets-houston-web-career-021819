@@ -1,4 +1,6 @@
 require_relative "./cat.rb"
+require_relative "./dog.rb"
+require_relative "./fish.rb"
 
 class Owner
   attr_accessor :pets, :name
@@ -8,6 +10,7 @@ class Owner
   def initialize(name)
     self.pets = {:fishes => [], :cats => [], :dogs => []}
     @species = "human"
+    self.name = name
     @@all << self
   end
 
